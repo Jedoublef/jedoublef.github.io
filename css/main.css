@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #262005;
+  background: #fbe465;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2498,10 +2498,15 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
+body {
+  transition: background-image 0.3s ease-in-out;
+}
+body.darkmode--activated {
+  background-image: url("/images/bg.jpg") !important;
+}
+body:not(.darkmode--activated) {
+  background-image: url("/images/Norge2.jpg") !important;
+}
 .darkmode--activated {
   --body-bg-color: transparent !important;
-}
-/* 白天模式背景 - no work */
-.content-wrap {
-  opacity: 0.9;
 }
